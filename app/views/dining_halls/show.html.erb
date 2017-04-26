@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dining_hall.name %>
+</p>
+
+<table>
+
+  <tbody>
+    <% @dining_hall.menu_items.each do |item| %>
+      <tr>
+        <td><%= link_to item.name, item %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

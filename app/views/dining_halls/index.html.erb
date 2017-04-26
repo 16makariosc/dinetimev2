@@ -1,0 +1,104 @@
+<p id="notice"><%= notice %></p>
+
+<%= stylesheet_link_tag 'styles' %>
+
+<h1>Listing Dining Halls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dining_halls.each do |dining_hall| %>
+      <tr>
+        <td><%= link_to dining_hall.name, dining_hall %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<script>
+
+window.onload = function () {
+
+  <% @dining_halls.each do |dining_hall| %>
+
+    document.getElementById('<%= dining_hall.name %>').addEventListener('click', function(){
+      toggleElement('<%= dining_hall.name %>menu');
+    }, false);
+
+  <% end %>
+
+}
+
+</script>
+
+<body>
+
+  <div id = "banner">Click a dining hall to view its menu.</div>
+  <ul>
+
+    <% @dining_halls.each do |dining_hall| %>
+
+      <li id = "<%= dining_hall.name %>" class = "closed"><button><%= link_to dining_hall.name, dining_hall %><span class = "status">CLOSED</span></button></li>
+
+        <ul id = "<%= dining_hall.name %>menu" class = "hidden">
+          <li class = "menu"> test </li>
+        </ul>
+
+    <% end %>
+
+    <li id = "1920-commons" class = "closed"><button>Commons<span class = "status">CLOSED</span></button></li>
+
+      <ul id = "1920-commonsmenu" class = "hidden">   
+        <li class = "menu"> test </li>                
+      </ul>
+
+
+    <li id = "kings-court-english-house" class = "closed"><button>KCEH<span class = "status">CLOSED</span></button></li>
+      <ul id = "kings-court-english-housemenu" class = "hidden">                    
+      </ul>
+
+
+    <li id = "new-college-house" class = "closed"><button>NCH<span class = "status">CLOSED</span></button></li>
+      <ul id = "new-college-housemenu" class = "hidden">
+      </ul>
+
+    <li id = "falk-dining-commons" class = "closed"><button>Falk&nbspKosher<span class = "status">CLOSED</span></button></li>
+      <ul id = "falk-dining-commonsmenu" class = "hidden">
+      </ul>   
+
+    <li id = "mcclelland" class = "closed"><button>McClelland<span class = "status">CLOSED</span></button></li>
+      <ul id = "mcclellandmenu" class = "hidden">                   
+      </ul>
+
+    <li id = "new-college-houseretail" class = "closed"><button>NCH&nbspRetail<span class = "status">CLOSED</span></button></li>
+
+    <li id = "new-college-housemealeq" class = "closed"><button>NCH&nbspMeal&nbspEquivalency<span class = "status">CLOSED</span></button></li>
+  
+    <li id = "houston-market" class = "closed"><button>Houston<span class = "status">CLOSED</span></button></li>
+      <ul id = "houston-marketmenu" class = "hidden">
+      </ul>
+
+
+
+    <li id = "frontera" class = "closed"><button>Frontera<span class = "status">CLOSED</span></button></li>
+      <ul id = "fronteramenu" class = "hidden">
+      </ul>
+
+
+
+    <li id = "accenture" class = "closed"><button>Accenture<span class = "status">CLOSED</span></button></li>
+      <ul id = "accenturemenu" class = "hidden">
+      </ul>
+
+  </ul>
+</body>
+
+<br>
+
+<%= link_to 'New Dining hall', new_dining_hall_path %>

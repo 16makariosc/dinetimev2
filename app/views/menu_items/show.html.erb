@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @menu_item.name %><br>
+  Rating: <%= @menu_item.rating %><br>
+  <%= pluralize(@menu_item.rating, "vote") %> <br>
+  <%= button_to '+1', upvote_menu_item_url(@menu_item), method: :post %>
+</p>
+
+<table>
+
+  <tbody>
+    <% @menu_item.reviews.each do |review| %>
+      <tr>
+        <td><%= review.text %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

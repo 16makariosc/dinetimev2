@@ -1,0 +1,94 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskannada.css);
+
+html, body{
+    font-family: 'Noto Sans Kannada', sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+li{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin:0;
+
+}
+
+.open{
+	background-color: #4CAF50;
+}
+
+.closed{
+	background-color: #F44336;
+}
+
+.hidden{
+    display:none;
+}
+
+.inline{
+	float:right;
+}
+
+.status{
+	float: right;
+	position:absolute;
+	right:3%;
+	padding-bottom:16px;
+}
+
+.menu{
+    background:none;
+    background-color: #64B5F6;
+    line-height:16px;
+    padding: 10px;
+    padding-top:16px;
+    padding-right:100%;
+    padding-left: 6%;
+    font-size: 16px;
+    text-align: middle;
+    white-space: nowrap;
+    font-size:100%;
+}
+
+.menu:nth-child(even){
+    background-color: #42A5F5;
+}
+
+#footer{
+	font-size:12px;
+	margin:0px;
+}
+
+button{
+    background:none;
+    border:none;
+    padding: 1%;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-right:100%;
+    padding-left:3%;
+    font-size: 125%;
+    cursor: pointer;
+    overflow: hidden;
+    display: inline;
+
+}
+
+#banner{
+	background-color: #A2AFDE;
+	text-align: center;
+	padding: 1%;
+	font-size: 100%;
+}
+
+.small{
+	font-size: 100%;
+}
